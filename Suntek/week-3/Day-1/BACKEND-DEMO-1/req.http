@@ -59,4 +59,8 @@ Content-Type: application/json
   "brand": "Dell"
 }
 ###
+
+
+
+
 DELETE http://localhost:3000/product-api/products-id/101 

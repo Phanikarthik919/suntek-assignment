@@ -19,22 +19,22 @@ userApp.post('/users', (req, res) => {
 //put req handling route(update user)
 userApp.put('/users/:id', (req, res) => {
     let modifiedUser = req.body;
-    let userId = req.params.id;
-    let userFound = users.find((user) => user.id == userId);
+    let  userId= req.params.id;
+    let userFound= users.find((user) => user.id == userId);
     
     if (!userFound) {
         return res.status(404).json({"message": "User Not Found"});
     }
     
-    userFound.name = modifiedUser.name;
-    userFound.age = modifiedUser.age;
+    userFound.name= modifiedUser.name;
+    userFound.age= modifiedUser.age;
     res.status(200).json({"message": "User Updated Successfully", "payload": userFound});
 })
 
 //get user by id
 userApp.get('/users/:id', (req, res) => {
-    let userId = req.params.id;
-    let user = users.find((user) => user.id == userId);
+    let  userId= req.params.id;
+    let user= users.find((user) => user.id == userId);
     
     if (!user) {
         return res.status(404).json({"message": "User Not Found"});

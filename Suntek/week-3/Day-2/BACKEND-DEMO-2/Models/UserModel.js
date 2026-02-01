@@ -12,6 +12,7 @@ const productSchema = new Schema( {
   },
   productname:{
     type:String,
+
     required: [true,"productname is required"],
     minLength: [4,"Min length should be 4"],
     maxLength:[10,"Max length is  exceeded"]
@@ -28,7 +29,7 @@ const productSchema = new Schema( {
 export const product = model("product", productSchema);
 
 // 1. post /  products
-// 2. get /  products
+//2. get /  products
 // 3. get  /   products/<pid>
 // 4. put /  products/<pid> 
 
@@ -39,7 +40,7 @@ const userSchema = new Schema({
   username:{
     type:String,
     required:[true,"Username is required"],
-    minLength:[4,"Min length should be 4"],
+    minLength:  [4,"Min length should be 4"],
     maxLength:[6,"Max length is exceeded"]
   },
   password:{
@@ -48,8 +49,9 @@ const userSchema = new Schema({
   },
   age:{
     type:Number,
+
     required:[true,"Age is required"],
-    min:[18,"Min age should be 18"],
+    min: [18,"Min age should be 18"],
     max:[25,"Max age should be 25"]
   }
 },{
