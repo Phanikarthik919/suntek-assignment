@@ -1,6 +1,5 @@
 // User API Requests
-// user obj schema : {username, password, age}
-
+// schema : {username, password, age}
 
 ###
 GET http://localhost:4000/user-api/users
@@ -10,13 +9,12 @@ POST http://localhost:4000/user-api/users
 Content-Type: application/json
 
 {
-  "username":"bhanu",
-  "password":"bhanu",
-  "age":20
+  "username": "bhanu",
+  "password": "bhanu",
+  "age": 20
 }
+
 ###
-
-
 GET http://localhost:4000/user-api/users/697f8d767342a5275e948232
 
 ###
@@ -36,11 +34,7 @@ DELETE http://localhost:4000/user-api/users/697f8d767342a5275e948232
 ###
 
 // Product API Requests
-// product obj schema : {pid, productname, Price}
-// 1. post / products 
-// 2. get / products 
-// 3. get / products/:id 
-// 4. put / products/:id 
+// schema : {pid, productname, Price}
 
 ###
 GET http://localhost:4000/product-api/products
