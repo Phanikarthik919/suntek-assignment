@@ -19,6 +19,21 @@ GET http://localhost:4000/user-api/users/697f8d767342a5275e948232
 
 ###
 
+# user Autentication(Login)
+###
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+  "username":"bhanu",
+  "password":"bhanu"
+}
+
+###
+#req for protected route
+GET http://localhost:4000/user-dapi/test
+
+###
 PUT http://localhost:4000/user-api/users/697f8d767342a5275e948232
 Content-Type: application/json
 
@@ -28,36 +43,42 @@ Content-Type: application/json
   "age":22
 }
 
+
 ###
 DELETE http://localhost:4000/user-api/users/697f8d767342a5275e948232
 
-###
 
-// Product API Requests
-// schema : {pid, productname, Price}
+# ###
 
-###
-GET http://localhost:4000/product-api/products
+# // Product API Requests
+# // schema : {pid, productname, Price}
 
-###
-POST http://localhost:4000/product-api/products
-Content-Type: application/json
+# ###
+# GET http://localhost:4000/product-api/products
 
-{
-  "pid":1001,
-  "productname":"Laptop",
-  "Price":"50000"
-}
+# ###
+# POST http://localhost:4000/product-api/products
+# Content-Type: application/json
 
-###
-GET http://localhost:4000/product-api/products/697f8abde0e291640ff73374
+# {
+#   "pid":1001,
+#   "productname":"Laptop",
+#   "Price":"50000"
+# }
 
-###
-PUT http://localhost:4000/product-api/products/697f8abde0e291640ff73374
-Content-Type: application/json
+# ###
+# GET http://localhost:4000/product-api/products/697f8abde0e291640ff73374
 
-{
-  "pid":1001,
-  "productname":"Gaming Laptop",
-  "Price":"75000"
-}
+# ###
+# PUT http://localhost:4000/product-api/products/697f8abde0e291640ff73374
+# Content-Type: application/json
+
+# {
+#   "pid":1001,
+#   "productname":"Gaming Laptop",
+#   "Price":"75000"
+# }
+
+ ###
+
+

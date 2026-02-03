@@ -2,10 +2,12 @@
 import  Express from 'express'
 import mongoose from 'mongoose';
 import { connect } from 'mongoose';
+import cookieParser from "cookie-parser"
 import { userApp, productApp } from './APIs/userAPI.js';
 
 const app= Express();
 app.use( Express.json())
+app.use(cookieParser())
 
 // Database Connection
 async function connectDB() {
