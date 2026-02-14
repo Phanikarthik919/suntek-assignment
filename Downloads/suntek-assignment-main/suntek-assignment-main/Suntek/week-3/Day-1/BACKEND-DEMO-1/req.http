@@ -1,0 +1,66 @@
+GET http://localhost:3000/user-api/users
+
+###
+
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+  "id": "100",
+  "name": "kumdddar",
+  "age": 20
+}
+
+###
+GET http://localhost:3000/user-api/users/100
+
+###
+
+PUT http://localhost:3000/user-api/users/100
+Content-Type: application/json
+
+{
+  "name": "kumdddar updated",
+  "age": 21
+}
+
+###
+
+DELETE http://localhost:3000/user-api/users/100
+
+###
+
+
+GET http://localhost:3000/product-api/products
+###
+POST http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+  "productid": "101",
+  "name": "Laptop",
+  "price": 1500,
+  "brand": "Dell"
+}
+
+###
+
+GET http://localhost:3000/product-api/products-id/101
+###
+
+GET http://localhost:3000/product-api/products-brand/Dell
+###
+PUT http://localhost:3000/product-api/products-id/101
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop",
+  "price": 2000,
+  "brand": "Dell"
+}
+###
+
+
+
+
+DELETE http://localhost:3000/product-api/products-id/101 
