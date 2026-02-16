@@ -41,7 +41,8 @@ productApp.get('/products/:id',async (req, res) => {
 })
 
 //Update product
-productApp.put('/products/:id', async (req, res) => {let objId = req.params.id;
+productApp.put('/products/:id', async (req, res) => {
+    let objId = req.params.id;
     //get  modified 
     let modifiedproduct = req.body;
     // make update
