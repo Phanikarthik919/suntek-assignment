@@ -1,0 +1,40 @@
+import React from 'react';
+import ArticleCard from './ArticleCard';
+import { articleGrid, loadingClass, emptyStateClass } from '../styles/common';
+
+const Articles = ({
+  articles = [],
+  loading = false,
+  showActions = false,
+  onEdit,
+  onDelete,
+  onActivate,
+  onReadMore,
+  emptyMessage = "No articles found."
+}) => {
+  if (loading) {
+    return <div className={loadingClass}>Loading articles...</div>;
+  }
+
+  if (articles.length === 0) {
+    return <div className={emptyStateClass}>{emptyMessage}</div>;
+  }
+
+  return (
+    <div className={articleGrid}>
+      {articles.map((article) => (
+        <ArticleCard
+          key={article._id || article.id}
+          article={article}
+          showActions={showActions}
+          onEdit={onEdit}
+          onDelete={onDelete}
+          onActivate={onActivate}
+          onReadMore={onReadMore}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default Articles;
