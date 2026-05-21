@@ -2,6 +2,10 @@
 
 A full-stack MERN application for managing users with a modern, responsive UI and professional backend architecture.
 
+## Live Demo
+- **Frontend App**: [https://suntek-assignment-5ejm.vercel.app](https://suntek-assignment-5ejm.vercel.app)
+- **Backend API**: [https://suntek-assignment-alpha.vercel.app](https://suntek-assignment-alpha.vercel.app)
+
 ## Features
 
 **User Management**
