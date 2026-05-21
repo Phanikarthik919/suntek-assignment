@@ -26,13 +26,10 @@ Content-Type: application/json
   "cart":[]
 }
  
-###
-
-PUT http://localhost:4000/user-api/users
 
 #add products to cart
 ###
-PUT http://localhost:4000/user-api/user-cart/user-id/6980719b1ffaec80cd37b6e6/product-id/6980720e24a9227d5fd4565b
+PUT http://localhost:4000/user-api/user-cart/user-id/6980719b1ffaec80cd37b6e6/product-id/69806c39dc066099a51ba416
 
 
 

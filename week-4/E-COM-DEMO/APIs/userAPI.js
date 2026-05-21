@@ -15,7 +15,7 @@ userRoute.get('/users', async (req, res) => {
 userRoute.post('/users', async (req, res, next) => {
   
     let  newUser= req.body;
-    await new UserModel(newUser).validate();
+    await new UserModel(newUser).validate(); // to check if user data is valid or not
     //hash the password
     let hashedPassword = await hash(newUser.password,12);
     //replace plain password with hashed password
@@ -29,62 +29,33 @@ userRoute.post('/users', async (req, res, next) => {
     res.status(201).json({message: "User Created", payload: newUserDoc});
   
 })
-// userRoute.put("/user-cart/user-id/:uid/product-id/:pid",async(req,res)=>{
+userRoute.put("/user-cart/user-id/:uid/product-id/:pid",async(req,res)=>{
 
-
-//   //read uid and pid from url parameters
-//   let {uid,pid} = req.params;  //{uid:"", pid:""}
-//   //check user
-//   console.log("uid",uid)
-//   console.log("pid",pid)
-//   let user = await UserModel.findById(uid);
-//   if(!user){
-//     return res.status(401).json({message:"User not Found"})
-//   }
-//   //check product
-//   let product = await ProductModel.findById(pid);
-//   if(!product){
-//     return res.status(401).json({message:"product not Found"})
-//   }
-//   //perform the update
-//   let modifiedUser = await UserModel.findByIdAndUpdate(
-//     uid,
-//     {$push:{cart:{product:pid}}},
-//     {new:true}
-//   ).populate("cart.product")
-//   //res
-//   res.status(201).json({message:"cart Modified" , payload:modifiedUser});
-// })
-
-//read user by id
-
-userRoute.put("/user-cart/user-id/:uid/product-id/:pid", async (req, res, next) => {
-  // read uid and pid from url parameters
-  let {uid, pid } = req.params
-  
-  // check user
-  let user= await UserModel.findById(uid)
-  if (!user) {
-    return res.status(404).json({ message: "User not found" })
+  //read uid and pid from url parameters
+  let {uid,pid} = req.params;  //{uid:"", pid:""}
+  //check user
+  console.log("uid",uid)
+  console.log("pid",pid)
+  let user = await UserModel.findById(uid);
+  if(!user){
+    return res.status(401).json({message:"User not Found"})
   }
-  
-  // check if product already in cart
-  let cartItem = user.cart.find(item => item.product.toString() === pid)
-  
-  if (cartItem) {
-    // product exists, increment quantity
-    cartItem.quantity += 1
-  } else {
-    // if product is not there then add with quantity 1
-    user.cart.push({ product: pid, quantity: 1 })
+  //check product
+  let product = await ProductModel.findById(pid);
+  if(!product){
+    return res.status(401).json({message:"product not Found"})
   }
-  
-  await user.save()
-  let modifiedUser = await UserModel.findById(uid).populate("cart.product", "productName price")
-  
-  res.status(200).json({ message: "cart modified", payload: modifiedUser })
+  //perform the update
+  let modifiedUser = await UserModel.findByIdAndUpdate(
+    uid,
+    {$push:{cart:{product:pid}}},
+    {new:true}
+  ).populate("cart.product")
+  //res
+  res.status(201).json({message:"cart Modified" , payload:modifiedUser});
 })
 
+//read user by id
 userRoute.get("/users/:uid",async(req,res)=>{
   let {uid} = req.params;
   //find   product byid

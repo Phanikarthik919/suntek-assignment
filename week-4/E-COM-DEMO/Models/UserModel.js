@@ -1,24 +1,11 @@
 import {Schema,model} from 'mongoose'
 
-// //create cart schema
-// const cartSchema = new Schema({
-//   product:{
-//     type:Schema.Types.ObjectId,
-//     ref:"product" //name of product model
-//   }
-// })
-
 //create cart schema
-const cartSchema = new Schema({
-  product:{
+const cartSchema = new Schema({  //embedded schema demonstrating relationship between user and product
+  product:{ //product only stores ObjectId referencing product document not entire product details
     type:Schema.Types.ObjectId,
     ref:"product" //name of product model
-  },
-  quantity:{
-    type:Number,
-    default:1,
-    required:[true,"quantity is required"]
-  }
+  } //reference(object id) pointing to product document in product collection
 })
 //user schema
 const userSchema = new Schema({
@@ -29,14 +16,14 @@ const userSchema = new Schema({
   email:{
     type:String,
     required:[true,"Email is required"],
-    unique:true
+    unique:true //ensures no duplicates in database
   },
   password: {
     type: String,
     required:[true,"Password is required"]
   },
   cart:{
-    type:[cartSchema]
+    type:[cartSchema]  //array of cart items using embedded schema
   }
 
 },{
@@ -45,4 +32,5 @@ const userSchema = new Schema({
   versionKey:false
 })
 
+//export user model
 export const UserModel = model("user",userSchema);
