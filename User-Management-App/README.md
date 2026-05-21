@@ -2,34 +2,34 @@
 
 A full-stack MERN application for managing users with a modern, responsive UI and professional backend architecture.
 
-## 🚀 Features
+## Features
 
-✅ **User Management**
+**User Management**
 - Create new users with validation
 - View all users in a professional table
 - Delete users with confirmation
 - Real-time state management
 
-✅ **Professional UI**
+**Professional UI**
 - Beautiful gradient design with Tailwind CSS
 - Fully responsive (mobile, tablet, desktop)
 - Smooth animations and transitions
 - Intuitive navigation
 
-✅ **Robust Backend**
+**Robust Backend**
 - RESTful API with proper error handling
 - MongoDB database with validation
 - CORS enabled for production
 - Environment variable configuration
 
-✅ **Easy Deployment**
+**Easy Deployment**
 - One-click deployment to Vercel
 - MongoDB Atlas integration
 - Production-ready configuration
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 User-Management-App/
@@ -68,7 +68,7 @@ User-Management-App/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 19** - UI library
@@ -93,7 +93,7 @@ User-Management-App/
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18+ installed
 - npm or yarn package manager
@@ -103,7 +103,7 @@ User-Management-App/
 
 ---
 
-## 🚀 Getting Started Locally
+## Getting Started Locally
 
 ### 1. Clone & Install
 
@@ -158,7 +158,7 @@ Open browser: `http://localhost:5173`
 
 ---
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Base URL (Local)
 ```
@@ -194,7 +194,7 @@ fetch('http://localhost:4000/user-api/users', {
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### User Model
 
@@ -213,7 +213,7 @@ fetch('http://localhost:4000/user-api/users', {
 
 ---
 
-## 🎨 Component Hierarchy
+## Component Hierarchy
 
 ```
 RootLayout
@@ -228,7 +228,7 @@ RootLayout
 
 ---
 
-## 🌐 State Management
+## State Management
 
 Uses **React Context API** (`UserContext`) for:
 - User data management
@@ -241,7 +241,7 @@ Access anywhere with: `const { users, loading, error } = useUsers()`
 
 ---
 
-## 🚀 Deployment on Vercel
+## Deployment on Vercel
 
 ### Quick Start (5 minutes)
 
@@ -252,7 +252,7 @@ See **QUICK_DEPLOYMENT_GUIDE.md** for complete instructions.
 2. Deploy backend on Vercel
 3. Deploy frontend on Vercel
 4. Configure environment variables
-5. Done! 🎉
+5. Done!
 
 ### Detailed Guide
 
@@ -260,7 +260,7 @@ See **DEPLOYMENT_GUIDE.md** for comprehensive deployment information.
 
 ---
 
-## 🔧 Available Scripts
+## Available Scripts
 
 ### Backend
 ```bash
@@ -279,7 +279,7 @@ npm run lint     # Run ESLint
 
 ---
 
-## 🎯 Features Explained
+## Features Explained
 
 ### User Management
 - **Add User**: Form validation with React Hook Form
@@ -303,18 +303,18 @@ npm run lint     # Run ESLint
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
-- ✅ Input validation on frontend
-- ✅ Schema validation on backend
-- ✅ CORS configured for specific origins
-- ✅ MongoDB injection prevention via Mongoose
-- ✅ XSS protection via React
-- ⚠️ Note: Add authentication/authorization for production
+- Input validation on frontend
+- Schema validation on backend
+- CORS configured for specific origins
+- MongoDB injection prevention via Mongoose
+- XSS protection via React
+- Note: Add authentication/authorization for production
 
 ---
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 - [ ] User authentication & authorization
 - [ ] Edit user details (PUT endpoint)
@@ -329,7 +329,7 @@ npm run lint     # Run ESLint
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Cannot connect to backend
 - Ensure backend is running on `http://localhost:4000`
@@ -348,7 +348,7 @@ npm run lint     # Run ESLint
 
 ---
 
-## 📞 Support
+## Support
 
 For issues or questions:
 1. Check error messages in console
@@ -358,13 +358,13 @@ For issues or questions:
 
 ---
 
-## 📄 License
+## License
 
 ISC License - Feel free to use this project!
 
 ---
 
-## 🎓 Learning Resources
+## Learning Resources
 
 - [React Documentation](https://react.dev)
 - [Express.js Guide](https://expressjs.com)
@@ -374,8 +374,8 @@ ISC License - Feel free to use this project!
 
 ---
 
-## ✨ Credits
+## Credits
 
-Built with ❤️ using modern web technologies
+Built using modern web technologies
 
-**Happy Coding! 🚀**
+**Happy Coding!**
