@@ -7,7 +7,13 @@ This week focuses on foundational JavaScript concepts, helping you understand ho
 
 ### 1. Array Operations (Advanced)
 *Folder: `Array-operation-advanced`*
-Hands-on assignments using higher-order array methods (like `map`, `filter`, `reduce`, `find`) in real-world scenarios:
+Hands-on assignments using higher-order array methods in real-world scenarios. Here is a breakdown of the key methods used:
+- **`map`**: Creates a new array by transforming every element in an existing array.
+- **`filter`**: Creates a new array containing only elements that pass a specific condition.
+- **`reduce`**: Iterates through an array to accumulate and return a single value (like a total sum).
+- **`find`**: Returns the first element in an array that satisfies a given condition.
+
+**Assignments:**
 - **`cart.js`**: Calculating totals and managing a shopping cart.
 - **`employees.js`**: Filtering and processing employee records.
 - **`movies.js`**: Sorting and analyzing collections of movie data.
